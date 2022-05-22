@@ -8,14 +8,59 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var alertIsVisible: Bool = false
+    @State private var whosThereVisible: Bool = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("🎯🎯🎯\n PUT THE BULLSEYE \n AS CLOSE AS YOU CAN TO\n 👇🏼👇🏼👇🏼")
+                .bold()
+                .kerning(2.0)
+                .multilineTextAlignment(.center)
+                .lineSpacing(6.0)
+                .font(.footnote)
+            
+            Text("89")
+                .kerning(-1.0)
+                .bold()
+                .font(.largeTitle)
+                .fontWeight(.black)
+            HStack {
+                Text("1")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                Slider(value: .constant(50), in: 1.0...100.0)
+                Text("100")
+                    .font(.title3)
+                    .fontWeight(.bold)
+            }
+            Button("Hit Me") {
+                // TO-DO Action
+                print("Hit Me Clicked..")
+                self.alertIsVisible = true
+            }.alert("Hello World!", isPresented: $alertIsVisible) {
+                Button("Awesome!"){}
+            } message: {
+                Text("This is my first popup")
+            }
+            
+            Button("Knock Knock!") {
+                self.whosThereVisible = true
+            }.alert("Who's There?", isPresented: $whosThereVisible) {
+                Button("Little Old Lady who?"){}
+            } message: {
+                Text("Little Old Lady")
+            }
+
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environment(\.sizeCategory, .large)
+        ContentView().previewLayout(.fixed(width: 568, height: 320))
     }
 }
