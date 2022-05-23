@@ -48,7 +48,7 @@ struct ContentView: View {
                 .textCase(.uppercase)
                 .font(.title3)
                 .padding(20.0)
-                .background(Color.blue)
+                .background(Color("ButtonColor"))
                 .foregroundColor(Color.white)
                 .cornerRadius(21.0)
                 .alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
