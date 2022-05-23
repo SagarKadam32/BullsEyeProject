@@ -73,5 +73,8 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .environment(\.sizeCategory, .large)
         ContentView().previewLayout(.fixed(width: 568, height: 320))
+        
+        ContentView().preferredColorScheme(.dark)
+        ContentView().previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)
     }
 }
