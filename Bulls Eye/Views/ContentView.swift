@@ -14,37 +14,50 @@ struct ContentView: View {
     @State private var game = Game()
     
     var body: some View {
-        VStack {
-            Text("🎯🎯🎯\n PUT THE BULLSEYE \n AS CLOSE AS YOU CAN TO\n 👇🏼👇🏼👇🏼")
-                .bold()
-                .kerning(2.0)
-                .multilineTextAlignment(.center)
-                .lineSpacing(6.0)
-                .font(.footnote)
-            
-            Text("\(game.target)")
-                .kerning(-1.0)
-                .bold()
-                .font(.largeTitle)
-                .fontWeight(.black)
-            HStack {
-                Text("1")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                Slider(value: $sliderValue, in: 1.0...100.0)
-                Text("100")
-                    .font(.title3)
-                    .fontWeight(.bold)
-            }
-            Button("Hit Me") {
-                // TO-DO Action
-                alertIsVisible = true
-            }.alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
-                Button("Awesome!"){}
-            } message: {
-                let roundedVar = Int(sliderValue.rounded())
-                Text("The slider value is \(roundedVar).\n" +
-                     "Your score is \(game.point(sliderValue: roundedVar)) this round.")
+        ZStack {
+            Color.gray
+                .edgesIgnoringSafeArea(.all)
+            VStack {
+                Text("🎯🎯🎯\n PUT THE BULLSEYE \n AS CLOSE AS YOU CAN TO\n 👇🏼👇🏼👇🏼")
+                    .bold()
+                    .kerning(2.0)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(6.0)
+                    .font(.footnote)
+                
+                Text("\(game.target)")
+                    .kerning(-1.0)
+                    .bold()
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                HStack {
+                    Text("1")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    Slider(value: $sliderValue, in: 1.0...100.0)
+                    Text("100")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                }
+                .padding()
+                
+                Button("Hit Me") {
+                    // TO-DO Action
+                    alertIsVisible = true
+                }
+                .textCase(.uppercase)
+                .font(.title3)
+                .padding(20.0)
+                .background(Color.blue)
+                .foregroundColor(Color.white)
+                .cornerRadius(21.0)
+                .alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
+                    Button("Awesome!"){}
+                } message: {
+                    let roundedVar = Int(sliderValue.rounded())
+                    Text("The slider value is \(roundedVar).\n" +
+                         "Your score is \(game.point(sliderValue: roundedVar)) this round.")
+                }
             }
         }
     }
