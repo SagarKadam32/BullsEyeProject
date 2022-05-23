@@ -48,7 +48,12 @@ struct ContentView: View {
                 .textCase(.uppercase)
                 .font(.title3)
                 .padding(20.0)
-                .background(Color("ButtonColor"))
+                .background(
+                    ZStack {
+                        Color("ButtonColor")
+                        LinearGradient(gradient: Gradient(colors: [Color.white, Color.clear]), startPoint: .top, endPoint: .bottom)
+                    }
+                )
                 .foregroundColor(Color.white)
                 .cornerRadius(21.0)
                 .alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
