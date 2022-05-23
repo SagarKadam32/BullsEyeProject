@@ -38,12 +38,13 @@ struct ContentView: View {
             }
             Button("Hit Me") {
                 // TO-DO Action
-                print("Hit Me Clicked..")
+//                print("Hit Me Clicked..")
                 self.alertIsVisible = true
-            }.alert("Hello World!", isPresented: $alertIsVisible) {
+            }.alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
                 Button("Awesome!"){}
             } message: {
-                Text("The slider value is \(self.sliderValue).")
+                let roundedVar : Int = Int(self.sliderValue.rounded())
+                Text("The slider value is \(roundedVar).")
             }
             
 //            Button("Knock Knock!") {

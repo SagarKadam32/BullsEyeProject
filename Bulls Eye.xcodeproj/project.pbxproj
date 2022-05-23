@@ -51,9 +51,9 @@
 		1B573E02283A166F00B729CE /* Bulls Eye */ = {
 			isa = PBXGroup;
 			children = (
-				1B573E03283A166F00B729CE /* Bulls_EyeApp.swift */,
-				1B573E05283A166F00B729CE /* ContentView.swift */,
-				1B573E07283A167100B729CE /* Assets.xcassets */,
+				1B573E13283B3B9D00B729CE /* App */,
+				1B573E12283B3B9500B729CE /* Views */,
+				1B573E11283B3B6800B729CE /* Models */,
 				1B573E09283A167100B729CE /* Preview Content */,
 			);
 			path = "Bulls Eye";
@@ -65,6 +65,30 @@
 				1B573E0A283A167100B729CE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1B573E11283B3B6800B729CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1B573E12283B3B9500B729CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B573E05283A166F00B729CE /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1B573E13283B3B9D00B729CE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1B573E03283A166F00B729CE /* Bulls_EyeApp.swift */,
+				1B573E07283A167100B729CE /* Assets.xcassets */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
