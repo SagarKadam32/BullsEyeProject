@@ -24,6 +24,7 @@ struct ContentView: View {
                     .multilineTextAlignment(.center)
                     .lineSpacing(6.0)
                     .font(.footnote)
+                    .foregroundColor(Color("TextColor"))
                 
                 Text("\(game.target)")
                     .kerning(-1.0)
@@ -34,10 +35,12 @@ struct ContentView: View {
                     Text("1")
                         .font(.title3)
                         .fontWeight(.bold)
+                        .foregroundColor(Color("TextColor"))
                     Slider(value: $sliderValue, in: 1.0...100.0)
                     Text("100")
                         .font(.title3)
                         .fontWeight(.bold)
+                        .foregroundColor(Color("TextColor"))
                 }
                 .padding()
                 
