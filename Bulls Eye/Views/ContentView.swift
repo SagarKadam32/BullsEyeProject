@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var alertIsVisible: Bool = false
-//    @State private var whosThereVisible: Bool = false
     @State private var sliderValue:Double = 10.0
+    @State private var game: Game = Game()
     
     var body: some View {
         VStack {
@@ -22,7 +22,7 @@ struct ContentView: View {
                 .lineSpacing(6.0)
                 .font(.footnote)
             
-            Text("89")
+            Text("\(game.target)")
                 .kerning(-1.0)
                 .bold()
                 .font(.largeTitle)
@@ -38,23 +38,14 @@ struct ContentView: View {
             }
             Button("Hit Me") {
                 // TO-DO Action
-//                print("Hit Me Clicked..")
                 self.alertIsVisible = true
             }.alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
                 Button("Awesome!"){}
             } message: {
                 let roundedVar : Int = Int(self.sliderValue.rounded())
-                Text("The slider value is \(roundedVar).")
+                Text("The slider value is \(roundedVar).\n" +
+                     "Your score is \(self.game.point(sliderValue: roundedVar)) this round.")
             }
-            
-//            Button("Knock Knock!") {
-//                self.whosThereVisible = true
-//            }.alert("Who's There?", isPresented: $whosThereVisible) {
-//                Button("Little Old Lady who?"){}
-//            } message: {
-//                Text("Little Old Lady")
-//            }
-
         }
     }
 }
