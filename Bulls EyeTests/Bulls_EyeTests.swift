@@ -20,7 +20,24 @@ class Bulls_EyeTests: XCTestCase {
         game = nil
     }
     
+    func testScorePositive(){
+        var guess = game.target + 5
+        var score =  game.point(sliderValue: guess)
+        XCTAssertEqual(score, 95)
+    }
+    
+    func testScoreNegative(){
+        var guess = game.target - 5
+        var score = game.point(sliderValue: guess)
+        XCTAssertEqual(score, 95)
+    }
+    
+    
+    
+    /*
     func testExample() throws {
         XCTAssertEqual(game.point(sliderValue: 50), 999)
-    }
+    }*/
+    
+    
 }
