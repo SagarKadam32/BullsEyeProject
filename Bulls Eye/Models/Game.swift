@@ -30,8 +30,6 @@ struct Game {
             difference = difference * -1
         }*/
         
-        let difference = abs(target - sliderValue)
-        let awardedPoints = 100 - difference
-        return awardedPoints
+        return 100 - abs(target - sliderValue)
     }
 }
