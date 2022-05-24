@@ -22,11 +22,8 @@ struct ContentView: View {
                     .padding(.leading, 30.0)
                     .padding(.trailing, 30.0)
                     
-                Text("\(game.target)")
-                    .kerning(-1.0)
-                    .bold()
-                    .font(.largeTitle)
-                    .fontWeight(.black)
+                BigNumberText(textInput: "\(game.target)")
+                
                 HStack {
                     Text("1")
                         .font(.title3)

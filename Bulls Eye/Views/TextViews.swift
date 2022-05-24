@@ -33,7 +33,9 @@ struct BigNumberText: View {
 
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
-        InstructionText(textInstruction: "Instructions..")
-        BigNumberText(textInput: "999")
+        VStack {
+            InstructionText(textInstruction: "Instructions..")
+            BigNumberText(textInput: "999")
+        }
     }
 }
