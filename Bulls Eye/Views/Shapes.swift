@@ -15,6 +15,10 @@ struct Shapes: View {
                 .stroke(.blue, lineWidth: 20)
                 .frame(width: 200, height: 100)
             
+            Circle()
+                .strokeBorder(.red, lineWidth: 20)
+                .frame(width: 200, height: 100)
+            
             RoundedRectangle(cornerRadius: 20.0)
                 .fill(Color.orange)
                 .frame(width: 200, height: 100)
