@@ -18,21 +18,8 @@ struct ContentView: View {
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
             VStack {
-                
                 InstructionsView(game: $game)
-                
-                HStack {
-                    Text("1")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("TextColor"))
-                    Slider(value: $sliderValue, in: 1.0...100.0)
-                    Text("100")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("TextColor"))
-                }
-                .padding()
+                SliderView(sliderValue: $sliderValue)
                 
                 Button("Hit Me") {
                     // TO-DO Action
@@ -72,6 +59,19 @@ struct InstructionsView : View {
             BigNumberText(textInput: "\(game.target)")
         }
             
+    }
+}
+
+struct SliderView: View {
+    @Binding var sliderValue: Double
+    var body: some View {
+        HStack {
+            SliderLabelText(textInput: "1")
+            Slider(value: $sliderValue, in: 1.0...100.0)
+            SliderLabelText(textInput: "100")
+
+        }
+        .padding()
     }
 }
 
