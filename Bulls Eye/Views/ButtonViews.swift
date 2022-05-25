@@ -15,6 +15,7 @@ struct HitMeButton: View {
     var body: some View {
         Button("Hit Me") {
             alertIsVisible = true
+            game.startNewRound(points: game.point(sliderValue: Int(sliderValue)))
         }
         .textCase(.uppercase)
         .font(.title3)
