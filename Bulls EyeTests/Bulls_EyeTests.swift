@@ -33,11 +33,11 @@ class Bulls_EyeTests: XCTestCase {
     }
     
     
-    
-    /*
-    func testExample() throws {
-        XCTAssertEqual(game.point(sliderValue: 50), 999)
-    }*/
+    func testNewRound(){
+        game.startNewRound(points: 100)
+        XCTAssertEqual(game.score, 100)
+        XCTAssertEqual(game.round, 2)
+    }
     
     
 }
