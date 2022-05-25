@@ -17,6 +17,7 @@
 		1B7A9205283C991100D04D20 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A9204283C991100D04D20 /* ButtonViews.swift */; };
 		1B7A9207283CA05F00D04D20 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A9206283CA05F00D04D20 /* Shapes.swift */; };
 		1B7A9209283CAB4400D04D20 /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A9208283CAB4400D04D20 /* RoundViews.swift */; };
+		1B7A920B283DDFDC00D04D20 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		1B7A9204283C991100D04D20 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		1B7A9206283CA05F00D04D20 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		1B7A9208283CAB4400D04D20 /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				1B7A9204283C991100D04D20 /* ButtonViews.swift */,
 				1B7A9206283CA05F00D04D20 /* Shapes.swift */,
 				1B7A9208283CAB4400D04D20 /* RoundViews.swift */,
+				1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				1B573E06283A166F00B729CE /* ContentView.swift in Sources */,
 				1B573E24283C8A8E00B729CE /* TextViews.swift in Sources */,
+				1B7A920B283DDFDC00D04D20 /* BackgroundView.swift in Sources */,
 				1B7A9205283C991100D04D20 /* ButtonViews.swift in Sources */,
 				1B573E15283B3C9E00B729CE /* Game.swift in Sources */,
 				1B573E04283A166F00B729CE /* Bulls_EyeApp.swift in Sources */,
