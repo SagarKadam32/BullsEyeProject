@@ -20,7 +20,7 @@ struct ContentView: View {
                 InstructionsView(game: $game)
                     .padding(.bottom, alertIsVisible ? 0: 100.0)
                 if alertIsVisible {
-                    PointsView()
+                    PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
                 }else{
                     HitMeButton(alertIsVisible: $alertIsVisible,
                                 sliderValue: $sliderValue,

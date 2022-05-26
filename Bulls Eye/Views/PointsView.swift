@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct PointsView: View {
+    @Binding var alertIsVisible: Bool
+    @Binding var sliderValue: Double
+    @Binding var game: Game
+    
     var body: some View {
+        let roundedSliderValue = Int(sliderValue.rounded())
+        let points = game.point(sliderValue: roundedSliderValue)
         VStack(spacing:10) {
-            InstructionText(textInstruction: "Your selected slider value is")
-            BigNumberText(textInput: "99")
+            InstructionText(textInstruction: "\nOriginal Target Value = \(game.target)")
+            InstructionText(textInstruction: "You selected = \(roundedSliderValue)")
+            InstructionText(textInstruction: "Congratulations !!! \n Your Score is ")
+            BigNumberText(textInput: "\(points)")
             Button(action: {
+                game.startNewRound(points: points)
+                alertIsVisible = false
             }){
                 ButtonText(textInput: "Start New Round".uppercased())
             }
@@ -26,11 +36,14 @@ struct PointsView: View {
 }
 
 struct PointsView_Previews: PreviewProvider {
+    static private var alertIsVisible = Binding.constant(false)
+    static private var sliderValue = Binding.constant(50.0)
+    static private var game = Binding.constant(Game())
+    
     static var previews: some View {
-        PointsView()
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
             .environment(\.sizeCategory, .large)
-        PointsView().previewLayout(.fixed(width: 568, height: 320))
-
-        PointsView().preferredColorScheme(.dark)
-        PointsView().previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)    }
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 568, height: 320))
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).preferredColorScheme(.dark)
+        PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)    }
 }

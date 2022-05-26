@@ -31,14 +31,18 @@ struct HitMeButton: View {
             RoundedRectangle(cornerRadius: 21.0)
                 .strokeBorder(.white, lineWidth: 2.0)
         )
-        .alert("BULL's EYE !!!", isPresented: $alertIsVisible) {
-            Button("Awesome!"){
-                game.startNewRound(points: game.point(sliderValue: Int(sliderValue)))
-            }
-        } message: {
-            let roundedVar = Int(sliderValue.rounded())
-            Text("\nOriginal Target Value = \(game.target) \n\n Your selected slider value is \(roundedVar).\n" +
-                 "Your current score is \(game.point(sliderValue: roundedVar)) in this round.")
-        }
    }
+}
+
+struct HitMeButton_Previews: PreviewProvider {
+    static private var alertIsVisible = Binding.constant(false)
+    static private var sliderValue = Binding.constant(50.0)
+    static private var game = Binding.constant(Game())
+    
+    static var previews: some View {
+        HitMeButton(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
+            .environment(\.sizeCategory, .large)
+        HitMeButton(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 568, height: 320))
+        HitMeButton(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).preferredColorScheme(.dark)
+        HitMeButton(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game).previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)    }
 }
