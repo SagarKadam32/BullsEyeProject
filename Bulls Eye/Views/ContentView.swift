@@ -37,7 +37,6 @@ struct InstructionsView : View {
             
             BigNumberText(textInput: "\(game.target)")
         }
-            
     }
 }
 
