@@ -21,8 +21,10 @@ struct PointsView: View {
             InstructionText(textInstruction: "Congratulations !!! \n Your Score is ")
             BigNumberText(textInput: "\(points)")
             Button(action: {
+                withAnimation {
+                    alertIsVisible = false
+                }
                 game.startNewRound(points: points)
-                alertIsVisible = false
             }){
                 ButtonText(textInput: "Start New Round".uppercased())
             }
@@ -31,7 +33,8 @@ struct PointsView: View {
                 .frame(maxWidth: 300)
                 .background(Color("BackgroundColor"))
                 .cornerRadius(21.0)
-            .shadow(radius: 10, x: 5, y: 5)
+                .shadow(radius: 10, x: 5, y: 5)
+                .transition(.scale)
     }
 }
 

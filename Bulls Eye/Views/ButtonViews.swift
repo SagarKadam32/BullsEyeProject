@@ -14,9 +14,10 @@ struct HitMeButton: View {
     
     var body: some View {
         Button("Hit Me") {
-            alertIsVisible = true
-        }
-        .textCase(.uppercase)
+            withAnimation {
+                alertIsVisible = true
+            }
+        }.textCase(.uppercase)
         .font(.title3)
         .padding(20.0)
         .background(
