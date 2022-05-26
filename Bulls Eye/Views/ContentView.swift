@@ -16,8 +16,9 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             BackgroundView(game: $game)
-            VStack(spacing:100.0) {
+            VStack() {
                 InstructionsView(game: $game)
+                    .padding(.bottom, 100.0)
                 HitMeButton(alertIsVisible: $alertIsVisible,
                             sliderValue: $sliderValue,
                             game: $game)
