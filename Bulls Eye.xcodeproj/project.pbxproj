@@ -19,6 +19,7 @@
 		1B7A9209283CAB4400D04D20 /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A9208283CAB4400D04D20 /* RoundViews.swift */; };
 		1B7A920B283DDFDC00D04D20 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */; };
 		1B91D5FF283F387A009EEE0B /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91D5FE283F387A009EEE0B /* PointsView.swift */; };
+		1B91D601283F54D0009EEE0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91D600283F54D0009EEE0B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		1B7A9208283CAB4400D04D20 /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
 		1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1B91D5FE283F387A009EEE0B /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		1B91D600283F54D0009EEE0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1B573E14283B3C9E00B729CE /* Game.swift */,
+				1B91D600283F54D0009EEE0B /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				1B573E04283A166F00B729CE /* Bulls_EyeApp.swift in Sources */,
 				1B7A9207283CA05F00D04D20 /* Shapes.swift in Sources */,
 				1B7A9209283CAB4400D04D20 /* RoundViews.swift in Sources */,
+				1B91D601283F54D0009EEE0B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
