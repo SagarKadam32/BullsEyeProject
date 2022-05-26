@@ -8,31 +8,46 @@
 import SwiftUI
 
 struct Shapes: View {
+    @State private var IsWideShapes = true
     var body: some View {
         VStack {
-            Circle()
-                .inset(by: 10)
-                .stroke(.blue, lineWidth: 20)
-                .frame(width: 200, height: 100)
-            
-            Circle()
-                .strokeBorder(.red, lineWidth: 20)
-                .frame(width: 200, height: 100)
+            if !IsWideShapes {
+                Circle()
+                    .inset(by: 10)
+                    .stroke(.blue, lineWidth: 20)
+                    .frame(width: 200, height: 100)
+                    .transition(.scale)
+                
+                Circle()
+                    .strokeBorder(.red, lineWidth: 20)
+                    .frame(width: 200, height: 100)
+                    .transition(.slide)
+            }
             
             RoundedRectangle(cornerRadius: 20.0)
                 .fill(Color.orange)
-                .frame(width: 200, height: 100)
+                .frame(width: IsWideShapes ? 200 : 100, height: 100)
 
             Capsule()
                 .fill(Color.red)
-                .frame(width: 200, height: 100)
+                .frame(width: IsWideShapes ? 200 : 100, height: 100)
             
             Ellipse()
                 .fill(Color.yellow)
-                .frame(width: 200, height: 100)
+                .frame(width: IsWideShapes ? 200 : 100, height: 100)
             
+            
+            Button(action: {
+                withAnimation {
+                    IsWideShapes.toggle()
+                }
+            }){
+                ButtonText(textInput: "Animate".uppercased())
+            }
+            .padding()
         }
         .background(Color.green)
+       
     }
 }
 
