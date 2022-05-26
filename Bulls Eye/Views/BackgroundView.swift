@@ -70,10 +70,13 @@ struct RingsView: View {
         ZStack{
             Color("BackgroundColor")
                 .edgesIgnoringSafeArea(.all)
-            ForEach(1..<6){ ring in
+            ForEach(1..<15){ ring in
                 let size = CGFloat(ring * 100)
                 Circle()
-                    .strokeBorder(Color("ButtonStrokeColor"), lineWidth: 20)
+                    .stroke(lineWidth: 20)
+                    .fill(
+                        RadialGradient(gradient: Gradient(colors: [Color("RingsColor").opacity(0.3 * 0.8), Color("RingsColor").opacity(0)]), center: .center, startRadius: 100, endRadius: 300)
+                    )
                     .frame(width: size, height: size)
             }
         }
