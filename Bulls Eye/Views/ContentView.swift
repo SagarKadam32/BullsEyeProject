@@ -18,12 +18,19 @@ struct ContentView: View {
             BackgroundView(game: $game)
             VStack() {
                 InstructionsView(game: $game)
-                    .padding(.bottom, 100.0)
-                HitMeButton(alertIsVisible: $alertIsVisible,
-                            sliderValue: $sliderValue,
-                            game: $game)
+                    .padding(.bottom, alertIsVisible ? 0: 100.0)
+                if alertIsVisible {
+                    PointsView()
+                }else{
+                    HitMeButton(alertIsVisible: $alertIsVisible,
+                                sliderValue: $sliderValue,
+                                game: $game)
+                }
             }
-            SliderView(sliderValue: $sliderValue)
+            
+            if !alertIsVisible{
+                SliderView(sliderValue: $sliderValue)
+            }
         }
     }
 }
