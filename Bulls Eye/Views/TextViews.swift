@@ -82,6 +82,28 @@ struct ButtonText : View {
     }
 }
 
+struct ScoreText : View {
+    var score: Int
+    var body: some View {
+        Text(String(score))
+            .font(.title2)
+            .kerning(-0.2)
+            .fontWeight(.regular)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
+struct DateText : View {
+    var date: Date
+    var body: some View {
+        Text(date,style: .time)
+            .font(.title2)
+            .kerning(-0.2)
+            .fontWeight(.regular)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -91,7 +113,11 @@ struct TextViews_Previews: PreviewProvider {
             LabelTextView(textInput: "Score")
             LabelTextView(textInput: "Round")
             BodyText(textInput: "Your current score is 200")
+            ScoreText(score: 10)
+            DateText(date: Date())
             ButtonText(textInput: "Start New Round")
+   
+            
         }
         .padding()
     }

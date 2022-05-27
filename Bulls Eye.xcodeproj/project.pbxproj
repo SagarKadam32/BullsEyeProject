@@ -20,6 +20,7 @@
 		1B7A920B283DDFDC00D04D20 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */; };
 		1B91D5FF283F387A009EEE0B /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91D5FE283F387A009EEE0B /* PointsView.swift */; };
 		1B91D601283F54D0009EEE0B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B91D600283F54D0009EEE0B /* Constants.swift */; };
+		1B9E04082840996300A51011 /* LeaderBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9E04072840996300A51011 /* LeaderBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1B91D5FE283F387A009EEE0B /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
 		1B91D600283F54D0009EEE0B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1B9E04072840996300A51011 /* LeaderBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				1B7A9208283CAB4400D04D20 /* RoundViews.swift */,
 				1B7A920A283DDFDC00D04D20 /* BackgroundView.swift */,
 				1B91D5FE283F387A009EEE0B /* PointsView.swift */,
+				1B9E04072840996300A51011 /* LeaderBoardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B9E04082840996300A51011 /* LeaderBoardView.swift in Sources */,
 				1B573E06283A166F00B729CE /* ContentView.swift in Sources */,
 				1B573E24283C8A8E00B729CE /* TextViews.swift in Sources */,
 				1B91D5FF283F387A009EEE0B /* PointsView.swift in Sources */,
