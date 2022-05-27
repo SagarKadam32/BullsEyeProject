@@ -104,6 +104,17 @@ struct DateText : View {
     }
 }
 
+struct BigBoldText : View {
+    var text: String
+    var body: some View {
+        Text(text.uppercased())
+            .font(.title)
+            .kerning(2.0)
+            .fontWeight(.black)
+            .foregroundColor(Color("TextColor"))
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
@@ -113,9 +124,10 @@ struct TextViews_Previews: PreviewProvider {
             LabelTextView(textInput: "Score")
             LabelTextView(textInput: "Round")
             BodyText(textInput: "Your current score is 200")
+            ButtonText(textInput: "Start New Round")
             ScoreText(score: 10)
             DateText(date: Date())
-            ButtonText(textInput: "Start New Round")
+            BigBoldText(text: "LeaderBoard")
    
             
         }

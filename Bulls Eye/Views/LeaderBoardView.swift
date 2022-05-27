@@ -9,9 +9,11 @@ import SwiftUI
 
 struct LeaderBoardView: View {
     var body: some View {
-//        List(0 ..< 2) { item in
+        VStack(spacing: 10) {
+            HeaderView()
+            LabelView()
             RowView(index: 1, score: 10, date: Date())
-//        }
+        }
     }
 }
 
@@ -37,6 +39,39 @@ struct RowView : View {
     }
 }
 
+struct HeaderView : View {
+    var body: some View {
+        ZStack {
+            BigBoldText(text: "LeaderBoard")
+            HStack {
+                Spacer()
+                Button(action: {
+                }){
+                    RoundedImageViewFilled(systemName: "xmark")
+                        .padding(.trailing)
+                }
+            }
+
+        }
+    }
+}
+
+struct LabelView: View {
+    var body: some View {
+        HStack{
+            Spacer()
+                .frame(width:Constants.General.roundedViewLength)
+            Spacer()
+            LabelTextView(textInput: "Score")
+                .frame(width:Constants.Leaderboard.leaderBoardScoreColWidth)
+            Spacer()
+            LabelTextView(textInput: "Date")
+                .frame(width:Constants.Leaderboard.leaderBoardDateColWidth)
+        }.padding(.leading)
+        .padding(.trailing)
+        .frame(maxWidth: Constants.Leaderboard.leaderBoardMaxRowlWidth)
+    }
+}
 struct LeaderBoardView_Previews: PreviewProvider {
     static var previews: some View {
         LeaderBoardView()
