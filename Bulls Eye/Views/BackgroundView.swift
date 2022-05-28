@@ -42,7 +42,7 @@ struct TopView: View {
             }){
                 RoundedImageViewFilled(systemName: "list.dash")
             }.sheet(isPresented: $leaderBoardIsShowing, onDismiss: {}) {
-                LeaderBoardView(leaderBoardIsShowing: $leaderBoardIsShowing)
+                LeaderBoardView(leaderBoardIsShowing: $leaderBoardIsShowing, game: $game)
             }
         }
     }

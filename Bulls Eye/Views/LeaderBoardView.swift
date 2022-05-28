@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LeaderBoardView: View {
     @Binding  var leaderBoardIsShowing: Bool
+    @Binding var game: Game
+
     var body: some View {
         ZStack {
             Color("BackgroundColor")
@@ -16,7 +18,14 @@ struct LeaderBoardView: View {
             VStack(spacing: 10) {
                 HeaderView(leaderBoardIsShowing: $leaderBoardIsShowing)
                 LabelView()
-                RowView(index: 1, score: 10, date: Date())
+                ScrollView {
+                    VStack(spacing: 10.0) {
+                        ForEach(game.leaderBoardEntries.indices) { i in
+                            let leaderBoardEntry = game.leaderBoardEntries[i]
+                            RowView(index: i, score: leaderBoardEntry.score, date: leaderBoardEntry.date)
+                        }
+                    }
+                }
             }
         }
     }
@@ -59,7 +68,7 @@ struct HeaderView : View {
                 }else{
                     BigBoldText(text: "LeaderBoard")
                 }
-            }
+            }.padding(.top)
             HStack {
                 Spacer()
                 Button(action: {
@@ -92,14 +101,15 @@ struct LabelView: View {
 }
 struct LeaderBoardView_Previews: PreviewProvider {
     static private var leaderBoardIsShowing = Binding.constant(false)
+    static private var game = Binding.constant(Game(loadTestData: true))
 
     static var previews: some View {
 
-        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing)
+        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing, game: game)
             .environment(\.sizeCategory, .large)
-        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing).previewLayout(.fixed(width: 568, height: 320))
+        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing, game: game).previewLayout(.fixed(width: 568, height: 320))
         
-        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing).preferredColorScheme(.dark)
-        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing).previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)
+        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing, game: game).preferredColorScheme(.dark)
+        LeaderBoardView(leaderBoardIsShowing: leaderBoardIsShowing, game: game).previewLayout(.fixed(width: 568, height: 320)).preferredColorScheme(.dark)
     }
 }
