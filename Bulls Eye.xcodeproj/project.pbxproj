@@ -34,7 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1B573E00283A166F00B729CE /* Bulls Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bulls Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B573E00283A166F00B729CE /* Bull's Eye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bull's Eye.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B573E03283A166F00B729CE /* Bulls_EyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulls_EyeApp.swift; sourceTree = "<group>"; };
 		1B573E05283A166F00B729CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B573E07283A167100B729CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		1B573E01283A166F00B729CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B573E00283A166F00B729CE /* Bulls Eye.app */,
+				1B573E00283A166F00B729CE /* Bull's Eye.app */,
 				1B573E1A283B42DE00B729CE /* Bulls EyeTests.xctest */,
 			);
 			name = Products;
@@ -165,7 +165,7 @@
 			);
 			name = "Bulls Eye";
 			productName = "Bulls Eye";
-			productReference = 1B573E00283A166F00B729CE /* Bulls Eye.app */;
+			productReference = 1B573E00283A166F00B729CE /* Bull's Eye.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1B573E19283B42DE00B729CE /* Bulls EyeTests */ = {
@@ -418,7 +418,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sagarlearning.swift.Bulls-Eye";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,7 +446,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sagarlearning.swift.Bulls-Eye";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bull's Eye";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
